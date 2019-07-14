@@ -3920,11 +3920,11 @@ function! s:ConfigureTagsCommand_generate_ctags(...) dict
   endif
   let ctags_builder = self.lookup('ctags_builder')
   if ctags_builder.get_project_path() ==# ''
-    " call s:echo_error('Could not generate tags, WordPress not detected, Please set g:wordpress_vim_wordpress_path in your vimrc')
+    call s:echo_error('Could not generate tags, WordPress not detected, Please set g:wordpress_vim_wordpress_path in your vimrc')
     return 0
   endif
   if self.needs_tags_generation()
-    call s:echo_msg("WordPress: " . msg . " ctags ...")
+    " call s:echo_msg("WordPress: " . msg . " ctags ...")
     call ctags_builder.generate()
     return 1
   endif
