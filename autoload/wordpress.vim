@@ -3924,7 +3924,7 @@ function! s:ConfigureTagsCommand_generate_ctags(...) dict
     return 0
   endif
   if self.needs_tags_generation()
-    call s:echo_msg("WordPress: " . msg . " ctags ...")
+    " call s:echo_msg("WordPress: " . msg . " ctags ...")
     call ctags_builder.generate()
     return 1
   endif
