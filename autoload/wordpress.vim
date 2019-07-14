@@ -3905,7 +3905,7 @@ function! s:ConfigureTagsCommand_run(opts) dict
   elseif project.has_wordpress_path()
     let didGenerate = self.generate_ctags()
     if didGenerate
-      call s:echo_msg('WordPress: Generating ctags ... DONE')
+      " call s:echo_msg('WordPress: Generating ctags ... DONE')
     endif
   endif
   call self.configure_tag_option()
